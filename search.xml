@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hexo的高阶使用之网站收录及周边]]></title>
     <url>%2F2018%2F11%2F13%2F5%2F</url>
-    <content type="text"><![CDATA[网站收录百度 注册百度账号,打开站点管理 添加网站 -&gt; 站点属性 -&gt; 验证网站;验证时选HTML标签验证;只需修改主题配置文件,将baidu_site_verification: 百度code 即可 谷歌]]></content>
+    <content type="text"><![CDATA[网站收录百度 注册百度账号,打开站点管理 添加网站 -&gt; 站点属性 -&gt; 验证网站;验证时选HTML标签验证;只需修改主题配置文件,将baidu_site_verification: 百度code 即可 添加站点地图npm install hexo-generator-baidu-sitemap –save 谷歌 注册google账号,打开Google Webmaster tools 添加网站 -&gt; HTML标签验证 -&gt; 完成只需修改主题配置文件,将google_site_verification: 谷歌code 即可 添加站点地图npm install hexo-generator-sitemap –save]]></content>
       <categories>
         <category>tec</category>
       </categories>
