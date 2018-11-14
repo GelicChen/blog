@@ -146,7 +146,7 @@
 <meta property="og:site_name" content="静思亭">
 <meta property="og:description" content="以下基于hexo version 3.8.0  网站收录百度 注册百度账号,打开站点管理 添加网站 -&amp;gt; 站点属性 -&amp;gt; 验证网站;验证时选HTML标签验证;只需修改主题配置文件,将baidu_site_verification: 百度code 即可 站点地图插件 npm install hexo-generator-baidu-sitemap –savehexo clean -&amp;g">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-13T11:28:54.915Z">
+<meta property="og:updated_time" content="2018-11-14T01:47:25.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo的高阶使用之网站收录及周边">
 <meta name="twitter:description" content="以下基于hexo version 3.8.0  网站收录百度 注册百度账号,打开站点管理 添加网站 -&amp;gt; 站点属性 -&amp;gt; 验证网站;验证时选HTML标签验证;只需修改主题配置文件,将baidu_site_verification: 百度code 即可 站点地图插件 npm install hexo-generator-baidu-sitemap –savehexo clean -&amp;g">
@@ -477,7 +477,7 @@
               </span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tec/" itemprop="url" rel="index"><span itemprop="name">tec</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tec-tool/" itemprop="url" rel="index"><span itemprop="name">tec, tool</span></a></span>
 
                 
                 
@@ -529,6 +529,11 @@
 </ul>
 <h3 id="文章目录错乱"><a href="#文章目录错乱" class="headerlink" title="文章目录错乱"></a>文章目录错乱</h3><p>next自带目录解析工具要求的标题格式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">H2</span><br><span class="line">    H3</span><br><span class="line">H2</span><br><span class="line">    H3</span><br><span class="line">        H4</span><br></pre></td></tr></table></figure></p>
 <p>如果从H2跳到H4,会导致解析错乱</p>
+<h3 id="Hexo项目托管到Github"><a href="#Hexo项目托管到Github" class="headerlink" title="Hexo项目托管到Github"></a>Hexo项目托管到Github</h3><ul>
+<li>建库 git commit -&gt; git push</li>
+<li>git checkout -&gt; git fetch -&gt; git merge</li>
+<li>对于子仓库(如themes/next),在提交的手要删除其中的.git,并将其cache删除,方能提交</li>
+</ul>
 
       
     </div>
@@ -549,7 +554,7 @@
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
   <div></div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
+    <span>红包</span>
   </button>
   <div id="QR" style="display: none;">
 
@@ -598,6 +603,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/14/6/" rel="prev" title="带宽检测之Iperf">
+                带宽检测之Iperf <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -672,7 +681,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -702,7 +711,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -752,7 +763,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网站收录"><span class="nav-number">1.</span> <span class="nav-text">网站收录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#百度"><span class="nav-number">1.1.</span> <span class="nav-text">百度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谷歌"><span class="nav-number">1.2.</span> <span class="nav-text">谷歌</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站优化"><span class="nav-number">2.</span> <span class="nav-text">网站优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#速度慢"><span class="nav-number">2.1.</span> <span class="nav-text">速度慢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章目录错乱"><span class="nav-number">2.2.</span> <span class="nav-text">文章目录错乱</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网站收录"><span class="nav-number">1.</span> <span class="nav-text">网站收录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#百度"><span class="nav-number">1.1.</span> <span class="nav-text">百度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#谷歌"><span class="nav-number">1.2.</span> <span class="nav-text">谷歌</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站优化"><span class="nav-number">2.</span> <span class="nav-text">网站优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#速度慢"><span class="nav-number">2.1.</span> <span class="nav-text">速度慢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章目录错乱"><span class="nav-number">2.2.</span> <span class="nav-text">文章目录错乱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo项目托管到Github"><span class="nav-number">2.3.</span> <span class="nav-text">Hexo项目托管到Github</span></a></li></ol></li></ol></div>
             
 
           </div>
