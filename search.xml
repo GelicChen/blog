@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Http请求的参数的提交方式及SpringBoot接收]]></title>
+    <url>%2F2018%2F12%2F03%2F7%2F</url>
+    <content type="text"><![CDATA[Http请求的几种类型Get向特定的资源发出请求,具备幂等性 Post向指定的资源提交数据进行处理请求,数据被包含在请求体中 PutHttp 1.1 开始支持向指定资源位置上传其最新内容 DeleteHttp 1.1 开始支持请求服务器删除Request-URI所标识的资源 HeadHttp 1.1 开始支持向服务器索要与Get请求一致的响应,但不会返回响应体,仅返回响应消息头中的源信息 OptionsHttp 1.1 开始支持返回服务器针对特定资源所支持的Http请求方法 Http请求参数的提交方式Get请求无消息体,数据只可放在在url中,只能传输少量数据(1024字节客户端指定)在SpringBoot可用 @RequestParam指定属性去取,若不指定也会默认映射;也可用实体接收 Post有消息体,数据可放在消息体中,可传输大量数据传输内容类型有很多种,如Xml,JSON,Multipartfile SpringBoot的接收方式@RequestParamUrl中?后跟的参数以及form-data中提交的参数 @PathVarableUrl路径中的参数 @RequestBody仅Post有效,将post消息体中的数据转换成一个指定的实例 @ReqeustAttributeRequest中Attribute对应的属性 实体接收将参数自动映射成实体对象 其他暂时没有找到如何在post中如何接收application/x-www-form-urlencoded]]></content>
+      <categories>
+        <category>tec</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[带宽检测之Iperf]]></title>
     <url>%2F2018%2F11%2F14%2F6%2F</url>
     <content type="text"></content>
