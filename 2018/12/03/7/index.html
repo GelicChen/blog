@@ -139,13 +139,14 @@
 
 
   <meta name="description" content="Http请求的几种类型Get向特定的资源发出请求,具备幂等性 Post向指定的资源提交数据进行处理请求,数据被包含在请求体中 PutHttp 1.1 开始支持向指定资源位置上传其最新内容 DeleteHttp 1.1 开始支持请求服务器删除Request-URI所标识的资源 HeadHttp 1.1 开始支持向服务器索要与Get请求一致的响应,但不会返回响应体,仅返回响应消息头中的源信息 Opti">
+<meta name="keywords" content="tec">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Http请求的参数的提交方式及SpringBoot接收">
 <meta property="og:url" content="http://www.jfsite.site/2018/12/03/7/index.html">
 <meta property="og:site_name" content="静思亭">
 <meta property="og:description" content="Http请求的几种类型Get向特定的资源发出请求,具备幂等性 Post向指定的资源提交数据进行处理请求,数据被包含在请求体中 PutHttp 1.1 开始支持向指定资源位置上传其最新内容 DeleteHttp 1.1 开始支持请求服务器删除Request-URI所标识的资源 HeadHttp 1.1 开始支持向服务器索要与Get请求一致的响应,但不会返回响应体,仅返回响应消息头中的源信息 Opti">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-03T09:21:41.340Z">
+<meta property="og:updated_time" content="2019-01-03T11:55:54.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Http请求的参数的提交方式及SpringBoot接收">
 <meta name="twitter:description" content="Http请求的几种类型Get向特定的资源发出请求,具备幂等性 Post向指定的资源提交数据进行处理请求,数据被包含在请求体中 PutHttp 1.1 开始支持向指定资源位置上传其最新内容 DeleteHttp 1.1 开始支持请求服务器删除Request-URI所标识的资源 HeadHttp 1.1 开始支持向服务器索要与Get请求一致的响应,但不会返回响应体,仅返回响应消息头中的源信息 Opti">
@@ -476,7 +477,7 @@
               </span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tec/" itemprop="url" rel="index"><span itemprop="name">tec</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring/" itemprop="url" rel="index"><span itemprop="name">spring</span></a></span>
 
                 
                 
@@ -518,12 +519,14 @@
 <h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p>Http 1.1 开始支持<br>返回服务器针对特定资源所支持的Http请求方法</p>
 <h2 id="Http请求参数的提交方式"><a href="#Http请求参数的提交方式" class="headerlink" title="Http请求参数的提交方式"></a>Http请求参数的提交方式</h2><h3 id="Get-1"><a href="#Get-1" class="headerlink" title="Get"></a>Get</h3><p>请求无消息体,数据只可放在在url中,只能传输少量数据(1024字节客户端指定)<br>在SpringBoot可用 @RequestParam指定属性去取,若不指定也会默认映射;也可用实体接收</p>
 <h3 id="Post-1"><a href="#Post-1" class="headerlink" title="Post"></a>Post</h3><p>有消息体,数据可放在消息体中,可传输大量数据<br>传输内容类型有很多种,如Xml,JSON,Multipartfile</p>
-<h2 id="SpringBoot的接收方式"><a href="#SpringBoot的接收方式" class="headerlink" title="SpringBoot的接收方式"></a>SpringBoot的接收方式</h2><h3 id="RequestParam"><a href="#RequestParam" class="headerlink" title="@RequestParam"></a>@RequestParam</h3><p>Url中?后跟的参数以及form-data中提交的参数</p>
-<h3 id="PathVarable"><a href="#PathVarable" class="headerlink" title="@PathVarable"></a>@PathVarable</h3><p>Url路径中的参数</p>
-<h3 id="RequestBody"><a href="#RequestBody" class="headerlink" title="@RequestBody"></a>@RequestBody</h3><p>仅Post有效,将post消息体中的数据转换成一个指定的实例</p>
+<h2 id="SpringBoot注解"><a href="#SpringBoot注解" class="headerlink" title="SpringBoot注解"></a>SpringBoot注解</h2><h3 id="PathVariable"><a href="#PathVariable" class="headerlink" title="@PathVariable"></a>@PathVariable</h3><p>获取路径中的参数,?号之前的<br>PS1.还可以使用正则,如/url/{id:\d+}<br>PS2.当@PathVariable为非必需参数,可以通过多url配置实现</p>
+<h3 id="RequestParam"><a href="#RequestParam" class="headerlink" title="@RequestParam"></a>@RequestParam</h3><p>获取路径中的参数,?号之后的</p>
+<h3 id="RequestBody"><a href="#RequestBody" class="headerlink" title="@RequestBody"></a>@RequestBody</h3><p>将RequestBody中数据填充到一个对象中</p>
 <h3 id="ReqeustAttribute"><a href="#ReqeustAttribute" class="headerlink" title="@ReqeustAttribute"></a>@ReqeustAttribute</h3><p>Request中Attribute对应的属性</p>
-<h3 id="实体接收"><a href="#实体接收" class="headerlink" title="实体接收"></a>实体接收</h3><p>将参数自动映射成实体对象</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>暂时没有找到如何在post中如何接收application/x-www-form-urlencoded</p>
+<h2 id="请求的ContentType"><a href="#请求的ContentType" class="headerlink" title="请求的ContentType"></a>请求的ContentType</h2><h3 id="application-x-www-form-urlencoded"><a href="#application-x-www-form-urlencoded" class="headerlink" title="application/x-www-form-urlencoded"></a>application/x-www-form-urlencoded</h3><p>@RequestParam,@RequestBody可以处理</p>
+<h3 id="multipart-form-data"><a href="#multipart-form-data" class="headerlink" title="multipart/form-data"></a>multipart/form-data</h3><p>不能处理</p>
+<h3 id="其他格式如application-json-application-xml"><a href="#其他格式如application-json-application-xml" class="headerlink" title="其他格式如application/json,application/xml"></a>其他格式如application/json,application/xml</h3><p>必须使用@RequestBody处理</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/pqj222/article/details/78499677" target="_blank" rel="noopener">https://blog.csdn.net/pqj222/article/details/78499677</a><br><a href="https://www.cnblogs.com/xuyatao/p/8296095.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuyatao/p/8296095.html</a><br><a href="https://www.cnblogs.com/NeverCtrl-C/p/8185576.html" target="_blank" rel="noopener">https://www.cnblogs.com/NeverCtrl-C/p/8185576.html</a><br><a href="https://segmentfault.com/q/1010000009207313/a-1020000012338771" target="_blank" rel="noopener">https://segmentfault.com/q/1010000009207313/a-1020000012338771</a></p>
 
       
     </div>
@@ -569,6 +572,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/tec/" rel="tag"># tec</a>
+          
+        </div>
+      
 
       
       
@@ -578,8 +587,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/14/6/" rel="next" title="带宽检测之Iperf">
-                <i class="fa fa-chevron-left"></i> 带宽检测之Iperf
+              <a href="/2018/11/14/6/" rel="next" title="frp端口映射之tcp">
+                <i class="fa fa-chevron-left"></i> frp端口映射之tcp
               </a>
             
           </div>
@@ -695,7 +704,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -745,7 +756,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Http请求的几种类型"><span class="nav-number">1.</span> <span class="nav-text">Http请求的几种类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get"><span class="nav-number">1.1.</span> <span class="nav-text">Get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Post"><span class="nav-number">1.2.</span> <span class="nav-text">Post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Put"><span class="nav-number">1.3.</span> <span class="nav-text">Put</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Delete"><span class="nav-number">1.4.</span> <span class="nav-text">Delete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Head"><span class="nav-number">1.5.</span> <span class="nav-text">Head</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Options"><span class="nav-number">1.6.</span> <span class="nav-text">Options</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Http请求参数的提交方式"><span class="nav-number">2.</span> <span class="nav-text">Http请求参数的提交方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-1"><span class="nav-number">2.1.</span> <span class="nav-text">Get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Post-1"><span class="nav-number">2.2.</span> <span class="nav-text">Post</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot的接收方式"><span class="nav-number">3.</span> <span class="nav-text">SpringBoot的接收方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RequestParam"><span class="nav-number">3.1.</span> <span class="nav-text">@RequestParam</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PathVarable"><span class="nav-number">3.2.</span> <span class="nav-text">@PathVarable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RequestBody"><span class="nav-number">3.3.</span> <span class="nav-text">@RequestBody</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReqeustAttribute"><span class="nav-number">3.4.</span> <span class="nav-text">@ReqeustAttribute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实体接收"><span class="nav-number">3.5.</span> <span class="nav-text">实体接收</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Http请求的几种类型"><span class="nav-number">1.</span> <span class="nav-text">Http请求的几种类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get"><span class="nav-number">1.1.</span> <span class="nav-text">Get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Post"><span class="nav-number">1.2.</span> <span class="nav-text">Post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Put"><span class="nav-number">1.3.</span> <span class="nav-text">Put</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Delete"><span class="nav-number">1.4.</span> <span class="nav-text">Delete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Head"><span class="nav-number">1.5.</span> <span class="nav-text">Head</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Options"><span class="nav-number">1.6.</span> <span class="nav-text">Options</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Http请求参数的提交方式"><span class="nav-number">2.</span> <span class="nav-text">Http请求参数的提交方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-1"><span class="nav-number">2.1.</span> <span class="nav-text">Get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Post-1"><span class="nav-number">2.2.</span> <span class="nav-text">Post</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot注解"><span class="nav-number">3.</span> <span class="nav-text">SpringBoot注解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PathVariable"><span class="nav-number">3.1.</span> <span class="nav-text">@PathVariable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RequestParam"><span class="nav-number">3.2.</span> <span class="nav-text">@RequestParam</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RequestBody"><span class="nav-number">3.3.</span> <span class="nav-text">@RequestBody</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReqeustAttribute"><span class="nav-number">3.4.</span> <span class="nav-text">@ReqeustAttribute</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求的ContentType"><span class="nav-number">4.</span> <span class="nav-text">请求的ContentType</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#application-x-www-form-urlencoded"><span class="nav-number">4.1.</span> <span class="nav-text">application/x-www-form-urlencoded</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multipart-form-data"><span class="nav-number">4.2.</span> <span class="nav-text">multipart/form-data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他格式如application-json-application-xml"><span class="nav-number">4.3.</span> <span class="nav-text">其他格式如application/json,application/xml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -765,7 +776,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">赣ICP备17015005号 </a>&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">赣ICP备17015005号 </a>&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

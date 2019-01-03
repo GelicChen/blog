@@ -138,17 +138,17 @@
 
 
 
-  <meta name="description" content="会当凌绝顶">
+  <meta name="description" content="[tcp_port_10000]type = tcplocal_ip = 127.0.0.1local_port = 3306remote_port = 10000use_encryption = falseuse_compression = falsesubdomain = mysql 注意tcp映射和http映射最大的区别是,tcp映射需占用一个端口,而http可以共用一个所以配置完以上配置后">
 <meta property="og:type" content="article">
-<meta property="og:title" content="带宽检测之Iperf">
+<meta property="og:title" content="frp端口映射之tcp">
 <meta property="og:url" content="http://www.jfsite.site/2018/11/14/6/index.html">
 <meta property="og:site_name" content="静思亭">
-<meta property="og:description" content="会当凌绝顶">
+<meta property="og:description" content="[tcp_port_10000]type = tcplocal_ip = 127.0.0.1local_port = 3306remote_port = 10000use_encryption = falseuse_compression = falsesubdomain = mysql 注意tcp映射和http映射最大的区别是,tcp映射需占用一个端口,而http可以共用一个所以配置完以上配置后">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-14T01:48:34.775Z">
+<meta property="og:updated_time" content="2018-12-03T13:40:58.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="带宽检测之Iperf">
-<meta name="twitter:description" content="会当凌绝顶">
+<meta name="twitter:title" content="frp端口映射之tcp">
+<meta name="twitter:description" content="[tcp_port_10000]type = tcplocal_ip = 127.0.0.1local_port = 3306remote_port = 10000use_encryption = falseuse_compression = falsesubdomain = mysql 注意tcp映射和http映射最大的区别是,tcp映射需占用一个端口,而http可以共用一个所以配置完以上配置后">
 
 
 
@@ -165,7 +165,7 @@
   };
 </script>
 
-  <title>带宽检测之Iperf | 静思亭</title>
+  <title>frp端口映射之tcp | 静思亭</title>
   
 
 
@@ -437,7 +437,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">带宽检测之Iperf
+          <h1 class="post-title" itemprop="name headline">frp端口映射之tcp
               
             
           </h1>
@@ -510,7 +510,9 @@
       
 
       
-        
+        <p>[tcp_port_10000]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 3306<br>remote_port = 10000<br>use_encryption = false<br>use_compression = false<br>subdomain = mysql</p>
+<p>注意tcp映射和http映射最大的区别是,tcp映射需占用一个端口,而http可以共用一个<br>所以配置完以上配置后,要开启远程服务器对应的端口<br>如上所以如果是开放向mysql这样的服务,一定要考虑到安全性(对内,对外)</p>
+
       
     </div>
 
@@ -676,7 +678,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -730,7 +734,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">赣ICP备17015005号 </a>&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">赣ICP备17015005号 </a>&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
